@@ -1,7 +1,7 @@
 // @ts-ignore
 import css from './App.css';
 import { Example } from './Example';
-import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
