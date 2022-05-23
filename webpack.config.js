@@ -34,6 +34,14 @@ module.exports = {
         ]
       },
       {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(svg|jpg|jpeg|png|gif)$/i,
+        type: 'asset/inline'
+      },
+      {
         test: /\.tsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -48,7 +56,7 @@ module.exports = {
       name: "sshsource",
       filename: "remoteEntry.js",
       exposes: {
-        // "./App": "./src/App",
+        "./App": "./src/App",
         "./Example": "./src/Example",
       },
       shared:{
