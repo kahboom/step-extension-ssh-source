@@ -42,7 +42,8 @@ module.exports = {
       name: "sshsource",
       filename: "remoteEntry.js",
       exposes: {
-        "./Test": "./src/Test",
+        // "./App": "./src/App",
+        "./Example": "./src/Example",
       },
       shared: ["react", "react-dom"],
     }),

@@ -1,7 +1,7 @@
-import * as React from 'react';
 // @ts-ignore
 import css from './App.css';
-import Test from './Test';
+import { Example } from './Example';
+import 'bootstrap';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           Step extension for ssh-source.
         </p>
       </header>
-      <Test />
+      <Example />
     </div>
   );
 }

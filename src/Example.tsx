@@ -1,8 +1,6 @@
-import * as React from 'react';
-
 const buttonStyling = {
-  backgroundColor: 'crimson',
-  // backgroundColor: 'BlueViolet',
+  // backgroundColor: 'crimson',
+  backgroundColor: 'BlueViolet',
   color: 'white',
   borderRadius: '25px',
   border: 0,
@@ -13,12 +11,12 @@ export type Props = {
   onButtonClicked?: () => void;
 }
 
-const Test = (props: Props) => {
+const Example = (props: Props) => {
   //() => console.log('BANANAS!')
   return (
     <button className={'superTest'} style={buttonStyling} onClick={props.onButtonClicked}>SSH Source</button>
   )
 };
 
-export default Test;
+export { Example };
 
