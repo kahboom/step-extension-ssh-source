@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin =
-  require("webpack").container.ModuleFederationPlugin;
+const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
 const path = require("path");
 
 module.exports = {
@@ -39,7 +38,7 @@ module.exports = {
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["@babel/preset-react", "@babel/preset-typescript"],
+          presets: [["@babel/preset-react", {"runtime": "automatic"}], "@babel/preset-typescript"],
         },
       },
     ],
@@ -52,7 +51,10 @@ module.exports = {
         // "./App": "./src/App",
         "./Example": "./src/Example",
       },
-      shared: ["react", "react-dom"],
+      shared:{
+        "react": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' },
+        "react-dom": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' }
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

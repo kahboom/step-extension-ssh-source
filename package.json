@@ -36,11 +36,7 @@
     "start": "webpack-cli serve",
     "build": "webpack --mode production",
     "serve": "serve dist -p 3002",
-    "clean": "rm -rf dist",
-    "startbu": "react-scripts start",
-    "buildbu": "react-scripts build",
-    "testbu": "react-scripts test",
-    "ejectbu": "react-scripts eject"
+    "clean": "rm -rf dist"
   },
   "eslintConfig": {
     "extends": [
