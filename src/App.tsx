@@ -5,11 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Step extension for ssh-source.
-        </p>
-      </header>
+      <p>
+        Step extension for ssh-source.
+      </p>
       <Example />
     </div>
   );
